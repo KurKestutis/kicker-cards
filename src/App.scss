@@ -4,13 +4,4 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
-  &-header {
-    background-color: $header-background-color;
-  }
-
-  &-main {
-    background-color: $main-background-color;
-    flex: 1 1;
-  }
 }

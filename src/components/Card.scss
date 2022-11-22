@@ -1,0 +1,11 @@
+@import "../styles/styles-variables";
+
+.card {
+  max-width: 500px;
+  &-head-wraper {
+    background-color: $picture-frame-color;
+  }
+  &-comments {
+    background-color: $chat-background-color;
+  }
+}
