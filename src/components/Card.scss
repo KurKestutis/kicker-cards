@@ -1,11 +1,30 @@
 @import "../styles/styles-variables";
 
 .card {
-  max-width: 500px;
-  &-head-wraper {
-    background-color: $picture-frame-color;
+  width: 31.25rem;
+  height: 34.37rem;
+  padding: 3rem;
+
+  &__head-wrapper {
+    background-color: $card-head-color;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.625rem 0.625rem 0 0;
+
+    &__img {
+      height: 27rem;
+      margin: 2rem;
+      border-radius: 1rem;
+      background-color: $picture-background-color;
+    }
+
+    &__header {
+      margin: 0 2rem 2rem 2rem;
+      line-height: 1.375rem;
+    }
   }
-  &-comments {
+
+  &__comments {
     background-color: $chat-background-color;
   }
 }

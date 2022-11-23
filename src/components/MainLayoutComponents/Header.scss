@@ -2,6 +2,10 @@
 
 .header {
   background-color: $header-background-color;
+  height: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   &-nav {
     &-list {
@@ -10,7 +14,6 @@
       justify-content: center;
 
       &-item {
-        color: $font-color;
         padding: 0.5rem;
       }
     }
