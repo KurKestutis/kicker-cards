@@ -6,3 +6,9 @@
   display: flex;
   justify-content: center;
 }
+
+@media screen and (max-width: $breakpoint-desktop) {
+  .main {
+    flex-wrap: wrap;
+  }
+}

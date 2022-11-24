@@ -6,6 +6,8 @@ const Main = (props) => {
   return (
     <main className="main">
       <Card />
+      <Card />
+      <Card />
     </main>
   );
 };
