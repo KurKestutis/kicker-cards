@@ -5,9 +5,11 @@ import Card from "../Card";
 const Main = (props) => {
   return (
     <main className="main">
-      <Card />
-      <Card />
-      <Card />
+      <div className="main__content">
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </main>
   );
 };
