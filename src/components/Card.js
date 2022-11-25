@@ -23,9 +23,6 @@ const Card = (props) => {
         <Comment />
         <Comment />
         <Comment />
-        <Comment />
-        <Comment />
-        <Comment />
       </section>
     </article>
   );
