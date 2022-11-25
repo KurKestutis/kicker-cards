@@ -6,9 +6,9 @@ const Main = (props) => {
   return (
     <main className="main">
       <div className="main__content">
-        <Card />
-        <Card />
-        <Card />
+        <Card key={1} />
+        <Card key={2} />
+        <Card key={3} />
       </div>
     </main>
   );
