@@ -1,19 +1,20 @@
 @import "../styles/styles-variables";
 
 .card {
-  padding: 1rem;
-  max-width: 30%;
+  margin: 1rem;
+  max-width: 36%;
+  overflow: hidden;
 
   &__head-wrapper {
     max-width: 30rem;
-    background-color: $card-head-color;
+    background-color: $seventh-color;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     border-radius: 0.625rem 0.625rem 0 0;
 
     &__img {
-      margin: 2rem;
+      margin: 1.5rem;
       border-radius: 1rem;
     }
 
@@ -36,21 +37,31 @@
   }
 
   &__comments {
-    background-color: $chat-background-color;
-    padding: 0 2rem 2rem 2rem;
+    max-height: 17rem;
+    width: 100%;
+    max-width: fit-content;
+    background-color: $third-color;
+    padding: 1rem 0;
     border-radius: 0 0 0.625rem 0.625rem;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 }
 
 @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
   .card {
-    max-width: 85%;
+    max-height: 37rem;
+    max-width: 90%;
+    width: 90%;
     display: flex;
     justify-content: center;
+    border-radius: 0.625rem;
 
     &__head-wrapper {
-      width: 50%;
+      width: 90%;
       flex-direction: column-reverse;
+      justify-content: space-between;
       border-radius: 0.625rem 0 0 0.625rem;
 
       &__header {
@@ -59,8 +70,11 @@
     }
 
     &__comments {
-      width: 60%;
+      background-color: $main-color;
+      width: 100%;
       border-radius: 0 0.625rem 0.625rem 0;
+      height: 0;
+      padding-bottom: 62%;
     }
   }
 }
@@ -68,5 +82,6 @@
 @media (max-width: $breakpoint-mobile) {
   .card {
     max-width: 90%;
+    border-radius: 0.625rem;
   }
 }

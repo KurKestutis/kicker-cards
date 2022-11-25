@@ -1,0 +1,51 @@
+@import "../../styles/styles-variables";
+
+.comment-input {
+  display: flex;
+  border-radius: 50%;
+  padding: 0 1rem;
+
+  &__field {
+    width: 100%;
+    height: 2.5rem;
+    background-color: $fifth-color;
+    border-radius: 2rem 0 0 2rem;
+    border: none;
+    padding-left: 1rem;
+  }
+
+  &__btn {
+    font-size: 0.75rem;
+    width: 6rem;
+    color: $font-color;
+    background-color: $sixth-color;
+    border: none;
+    border-radius: 0 2rem 2rem 0;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $font-color;
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $font-color;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $font-color;
+  }
+}
+
+@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+  .comment-input {
+    &__field {
+      background-color: $fourth-color;
+    }
+  }
+}

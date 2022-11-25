@@ -1,6 +1,8 @@
 import React from "react";
 import "./Card.scss";
 import picture from "../img/picture.jpg";
+import CommentInput from "./CardComponents/CommentInput";
+import Comment from "./CardComponents/Comment";
 
 const Card = (props) => {
   return (
@@ -13,15 +15,17 @@ const Card = (props) => {
           <p className="card__head-wrapper__header__text">Lorem ipsum dolor sit</p>
         </header>
       </section>
+
       <section className="card__comments">
-        <div>
-          <input type="text" placeholder="Placeholder..." />
-          <input type="submit" />
-        </div>
-        <p>1 Comment</p>
-        <p>2 Comment</p>
-        <p>3 Comment</p>
-        <p>4 Comment</p>
+        <CommentInput />
+        <Comment />
+        <Comment />
+        <Comment />
+        <Comment />
+        <Comment />
+        <Comment />
+        <Comment />
+        <Comment />
       </section>
     </article>
   );
