@@ -1,15 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
-import MenuButton from "../MenuButton";
+import MenuButton from "../MenuComponents/MenuButton";
 
-const Header = (props) => {
+const Header = () => {
+  // to change burger classes
+  const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
+  const [header__nav__list, setMenuClass] = useState("header__nav__list hidden");
+  const [isMenuClicked, setIsMenuClicked] = useState(false);
+  const [header, setHeader100] = useState("header header100");
+
+  // toggle burger menu change
+  const updateMenu = () => {
+    if (!isMenuClicked) {
+      setBurgerClass("burger-bar clicked");
+      setMenuClass("header__nav__list visible");
+      setHeader100("header header100vh");
+    } else {
+      setBurgerClass("burger-bar unclicked");
+      setMenuClass("header__nav__list hidden");
+      setHeader100("header headerNo100vh");
+    }
+    setIsMenuClicked(!isMenuClicked);
+  };
+
   return (
-    <header className="header">
+    <header className={header}>
       <nav className="header__nav">
-        <ul className="header__nav__list">
-          <MenuButton key={1} />
-          <MenuButton key={2} />
-          <MenuButton key={3} />
+        <div className="header__nav__burger" onClick={updateMenu}>
+          <div className={burger_class}></div>
+          <div className={burger_class}></div>
+          <div className={burger_class}></div>
+        </div>
+
+        <ul className={header__nav__list}>
+          <MenuButton />
+          <MenuButton />
+          <MenuButton />
         </ul>
       </nav>
     </header>

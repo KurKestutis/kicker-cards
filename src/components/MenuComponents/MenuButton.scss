@@ -1,0 +1,50 @@
+@import "../../styles/styles-variables";
+
+.menu-item {
+  padding: 1rem;
+  list-style: none;
+
+  &__btn {
+    border: none;
+    cursor: pointer;
+    background-color: $main-color;
+
+    &__text {
+      color: $font-color;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+
+      &:hover {
+        background-color: $seventh-color;
+      }
+
+      &:active {
+        background-color: $ninth-color;
+        color: $main-color;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .menu-item {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+
+    &__btn {
+      background-color: #5e5e5e;
+      &__text {
+        &:hover {
+          background-color: $seventh-color;
+        }
+
+        &:active {
+          background-color: $ninth-color;
+          color: $main-color;
+        }
+      }
+    }
+  }
+}

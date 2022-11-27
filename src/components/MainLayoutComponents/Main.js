@@ -1,14 +1,14 @@
 import React from "react";
 import "./Main.scss";
-import Card from "../Card";
+import Card from "../CardComponents/Card";
 
-const Main = (props) => {
+const Main = () => {
   return (
     <main className="main">
       <div className="main__content">
-        <Card key={1} />
-        <Card key={2} />
-        <Card key={3} />
+        <Card />
+        <Card />
+        <Card />
       </div>
     </main>
   );

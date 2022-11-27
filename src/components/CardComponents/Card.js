@@ -1,10 +1,10 @@
 import React from "react";
 import "./Card.scss";
-import picture from "../img/picture.jpg";
-import CommentInput from "./CardComponents/CommentInput";
-import Comment from "./CardComponents/Comment";
+import picture from "../../img/picture.jpg";
+import CommentInput from "./CommentInput";
+import Comment from "./Comment";
 
-const Card = (props) => {
+const Card = () => {
   return (
     <article className="card">
       <section className="card__head-wrapper content">

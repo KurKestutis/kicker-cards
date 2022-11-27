@@ -1,7 +1,7 @@
 import React from "react";
 import "./MenuButton.scss";
 
-const MenuButton = (props) => {
+const MenuButton = () => {
   return (
     <li className="menu-item">
       <button className="menu-item__btn">
