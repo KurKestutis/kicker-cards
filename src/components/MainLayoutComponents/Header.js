@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Header.scss";
 import MenuButton from "../MenuComponents/MenuButton";
 
-const Header = () => {
+const Header = (props) => {
   // to change burger classes
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
   const [header__nav__list, setMenuClass] = useState("header__nav__list hidden");
@@ -26,7 +26,13 @@ const Header = () => {
   return (
     <header className={header}>
       <nav className="header__nav">
-        <div className="header__nav__burger" onClick={updateMenu}>
+        <div
+          className="header__nav__burger"
+          onClick={() => {
+            updateMenu();
+            props.toggleNavMain(isMenuClicked);
+          }}
+        >
           <div className={burger_class}></div>
           <div className={burger_class}></div>
           <div className={burger_class}></div>
