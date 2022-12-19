@@ -5,7 +5,7 @@ import MenuButton from "../MenuComponents/MenuButton";
 const Header = (props) => {
   // to change burger classes
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
-  const [header__nav__list, setMenuClass] = useState("header__nav__list hidden");
+  const [header__nav__list, setMenuClass] = useState("header__nav__list");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   const [header, setHeader100] = useState("header header100");
 
